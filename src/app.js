@@ -1,14 +1,18 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.set("views", "./views");
+app.set("views", path.join(__dirname, "./views"))
 
-import userRouter from "./routes/user.routes.js"
+import userRouter from "./routes/user.routes.js";
 
-app.use("/", userRouter)
+app.use(userRouter);
 
-app.listen(process.env.PORT || 8080, () => {
-    console.log(`App is listening on port: ${process.env.PORT}`)
-})
+export {app}
