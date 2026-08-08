@@ -112,3 +112,8 @@ p{
     margin-left: 0.5rem;
     background-color: var(--secondary-color);
 }
+
+a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
