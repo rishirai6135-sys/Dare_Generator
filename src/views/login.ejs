@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('includes/head.ejs', { pageTitle: pageTitle }) %>
+<body>
+    <form method="post">
+        <div class="credentials">
+            <label for="register-fullname" class="credentials-label">Player Name:</label>
+            <input type="text" name="fullname" id="register-fullname" placeholder="Enter your Fullname" class="credentials-input">
+
+            <label for="register-input" class="credentials-label">Age:</label>
+            <input type="number" name="age" id="register-age" placeholder="Enter your Username" class="credentials-input">
+
+            <label for="register-username" class="credentials-label">Username:</label>
+            <input type="text" name="password" id="register-username" placeholder="Enter your Username" class="credentials-input">
+
+            <label for="register-password" class="credentials-label">Password:</label>
+            <input type="password" name="username" id="register-password" placeholder="Enter your Password" class="credentials-input">
+        </div>
+        <div class="sign-in-actions">    
+            <button type="button" class="success-sign-in">Register</button>
+            <button type="submit" class="cancel-sign-in">Cancel</button>
+        </div>
+        <p></p>
+    </form>
+</body>
+</html>
