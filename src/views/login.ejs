@@ -5,7 +5,7 @@
     <header>Header</header>
     <form method="post">
         <div>
-            <h1>Welcome Back</h1>
+            <h1>PLAYER LOGIN</h1>
             <hr>
         </div>
         <div>
@@ -14,13 +14,15 @@
                 <input type="text" name="password" id="register-username" class="credentials-input">
                 <label for="register-password" class="credentials-label">Password:</label>
                 <input type="password" name="username" id="register-password" class="credentials-input">
+                <a href="reset">forget password?</a>
             </div>
             <div class="sign-in-actions">    
-                <button type="submit" class="success-sign-in login">LOG IN</button>
-                <button type="button" class="cancel-sign-in redirect-register"><a href="/register">CREATE ACCOUNT</a></button>
+                <button type="submit" class="success-sign-in login">LOGIN</button>
+                <button type="button" class="cancel-sign-in login">CANCEL</button>
+
             </div>
         </div>
-        <p>*By logining, you agree to our Terms and Conditions</p>
+        <p>New Here? <a href="register">Register</a></p>
     </form>
     
     <%-include('includes/footer.ejs')%>
