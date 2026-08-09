@@ -10,7 +10,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.set("views", path.join(__dirname, "./views"))
-app.use(urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}))
 
 import userRouter from "./routes/user.routes.js";
 

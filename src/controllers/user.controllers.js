@@ -1,19 +1,26 @@
 // user.controllers.js
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {ApiError} from "../utils/ApiError.js"
+let count = 4;
 const users  = [
   {
     id : '1',
+    fullname: "Ram",
+    age: 15,
     username: "Ram",
     password: "appleisgreat"
   },
   {
     id : '2',
+    fullname: "Ramu",
+    age: 15,
     username: "Ramu",
     password: "appleisnotgreat"
   },
   {
     id : '3',
+    fullname: "Ramy",
+    age: 15,
     username: "Ramy",
     password: "appleisgreatess"
   }
@@ -30,17 +37,36 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Enter Credentials");
   }
 
-  const findUser = users.find(user => (user.username === user && user.password === password))
+  const findUser = users.find((user) => (user.username === username && user.password === password))
 
   if (!findUser){
-    throw new ApiError(400, "Incorrect Username or Password")
+    throw new ApiError(401, "Incorrect Username or Password")
   }
-  res.redirect("home")
+  res.redirect("/home")
 });
 
 const registerUser = asyncHandler(async (req, res) => {
-  // logic here
+  const {fullname, age, username, password} = req.body
+  if (!fullname || !age || !username || !password){
+    throw new ApiError(400, "Enter Credentials");
+  }
+  const findUser = users.find((user) => (user.username === username))
+  if (findUser){
+    throw new ApiError(401, "User Exists")
+  }
+  let newUser = {
+    id: ''+count,
+    fullname: fullname,
+    age: age,
+    username: username,
+    password: password
+  }
+  users.push(newUser)
+  res.redirect("/")
 });
+
+
+
 
 const showSubmitPage = (req, res) => {
   res.render("submit", {pageTitle: "Success"})
