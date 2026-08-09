@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -10,6 +10,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.set("views", path.join(__dirname, "./views"))
+app.use(urlencoded({extended: true}))
 
 import userRouter from "./routes/user.routes.js";
 
