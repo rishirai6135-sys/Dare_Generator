@@ -176,3 +176,11 @@ p a {
     right: 2.5rem;
 
 }
+
+.wrong-password{
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    -webkit-text-stroke: 0.75px var(--secondary-color);
+    -webkit-text-fill-color: var(--primary-text-color);
+}
