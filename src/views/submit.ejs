@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<%- include('includes/head.ejs', { pageTitle: pageTitle }) %>
-<body>
-    <div class="submission-card">
-        <form method="post">
-            <h3>Submit Dare</h3>
-            <textarea name="content"></textarea>
-            <button type="submit" onclick="history.back()">Add Dare</button>
-        </form>
-    </div>
-</body>
-</html>
+<% layout("/layouts/userMain.ejs") %>
+
+<div class="submission-card">
+    <form method="post">
+        <h3>Submit Dare</h3>
+        <textarea name="content"></textarea>
+        <button type="submit" onclick="history.back()">Add Dare</button>
+    </form>
+</div>

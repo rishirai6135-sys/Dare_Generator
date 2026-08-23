@@ -11,6 +11,9 @@ const userControllers = {
     },
     getReset: (req, res) => {
         res.render("reset.ejs", {pageTitle: "Reset Password"})
+    },
+    getHome: (req, res) => {
+        res.render("home.ejs", {pageTitle: "Welcome"})
     }
 }
 
