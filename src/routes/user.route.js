@@ -5,5 +5,6 @@ const userRoutes = Router();
 
 userRoutes.get("", userControllers.getLogin)
 userRoutes.get("/register", userControllers.getRegister)
+userRoutes.get("/reset", userControllers.getReset)
 
 export default userRoutes

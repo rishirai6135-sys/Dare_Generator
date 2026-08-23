@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<%- include('includes/head.ejs', { pageTitle: pageTitle }) %>
-<body>
-    <header>Header</header>
-    <form method="post">
-        <div>
-            <h1>RESET PASSWORD</h1>
-            <hr>
-        </div>
-        <div>
-            <div class="credentials">
-                <label for="register-username" class="credentials-label">Username:</label>
-                <input type="text" name="password" id="username" class="credentials-input">
-            </div>
-            <div class="sign-in-actions">    
-                <button type="submit" class="success-sign-in login">RESET</button>
-                <button type="button" class="cancel-sign-in" onclick=history.back()>CANCEL</button>
-            </div>
-        </div>
+<% layout("/layouts/boilerplate.ejs") %>
 
-        <p class="wrong-password">Cannot Find Password...</p>
-    </form>
-    
-    <%-include('includes/footer.ejs')%>
-</body>
-</html>
+<form method="post">
+    <div>
+        <h1>RESET PASSWORD</h1>
+        <hr>
+    </div>
+    <div>
+        <div class="credentials">
+            <label for="register-username" class="credentials-label">Username:</label>
+            <input type="text" name="password" id="username" class="credentials-input">
+        </div>
+        <div class="sign-in-actions">    
+            <button type="submit" class="success-sign-in login">RESET</button>
+            <button type="button" class="cancel-sign-in" onclick=history.back()>CANCEL</button>
+        </div>
+    </div>
+    <p class="wrong-password">Cannot Find Password...</p>
+</form>

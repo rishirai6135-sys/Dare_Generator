@@ -1,0 +1,111 @@
+form {
+    width: fit-content; /* or a fixed max-width like 28rem */
+    max-width: 90vw;
+    background-color: var(--custom-helper-color);
+    position: relative;
+    border: none;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+    color: var(--primary-text-color);
+}
+
+form::after {
+    content: '';
+    position: absolute;
+    inset: -2.5px;
+    border-radius: 1.5rem;
+    background: var(--main-gradient);
+    background-size: 200% 100%;
+    z-index: -1;
+    animation: borderMovement 1s infinite linear;
+}
+
+.credentials {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.credentials a {
+    text-align: right;
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    -webkit-text-stroke: 0.2px var(--secondary-color);
+}
+
+.credentials-label{
+    display: block;
+    font-size: 1.25rem;
+    color: var(--primary-text-color);
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+}
+
+.credentials-input{
+    padding: 0.5rem 0.5rem;
+    height: 2.5rem;
+    width: 25vw;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.sign-in-actions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin: 0.5rem 0;
+}
+
+.sign-in-actions button{
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+
+.success-sign-in{
+    margin-right: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+.cancel-sign-in{
+    margin-left: 0.5rem;
+    background-color: var(--secondary-color);
+}
+
+.toggle-password{
+    font-size: 1.25rem;
+    position: absolute;
+    padding: 0.75rem;
+    min-width: 1rem;
+    color: var(--secondary-color);
+    right: 3rem;
+}
+
+.icon{
+    font-size: 1.5rem;
+    position: absolute;
+    padding: 0.5rem;
+    min-width: 1rem;
+    color: var(--secondary-color);
+    right: 2.5rem;
+}
+
+.wrong-password{
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    -webkit-text-stroke: 0.75px var(--secondary-color);
+    -webkit-text-fill-color: var(--primary-text-color);
+}

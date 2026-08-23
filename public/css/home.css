@@ -1,0 +1,89 @@
+.home-header{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: inline-block;
+    background-color: var(--secondary-color);
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 0.5rem;
+}
+
+.project-bar, .user-avatar-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-bar span, .user-avatar-bar span{
+    margin: 0 0.5rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+nav label {
+    font-size: 1.25rem;
+    padding: 0.25rem 1.5rem 0 0.5rem;
+    height: 20%;
+}
+
+nav input:checked{
+    background-color: var(--secondary-text-color);
+}
+
+.home-redirectors a{
+    color: var(--primary-text-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.home-redirectors-containers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-redirectors{
+    border: none;
+    background-color: var(--custom-helper-color);
+    width: 25vw;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.home-redirectors::after{
+    content: '';
+    position: absolute;
+    inset: -2.5px;
+    border-radius: 0.5rem;
+    background: var(--main-gradient);
+    background-size: 200% 100%;
+    animation: borderMovement 1s infinite linear;
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dare-card{
+    text-align: center;
+    background-color: var(--secondary-color);
+    height: 45vh;
+    width: 45vh;
+    margin-bottom: 2.5rem;
+    border-radius: 5rem;
+}

@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popins", sans-serif;
+}
+
+:root{
+    --primary-color: #0fd6df;
+    --secondary-color: #f82a4c;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #16213e;
+    --custom-helper-color: #16213ef2;
+    --main-gradient: linear-gradient(to right, var(--secondary-color), var(--primary-color), var(--secondary-color));
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../assets/td-background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 4rem;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.75rem;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    margin-bottom: 0.75rem;
+    opacity: 0.75;
+}
+
+p{
+    margin-top: 0.25rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+@keyframes borderMovement {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}

@@ -8,8 +8,10 @@ const userControllers = {
 
     getRegister: (req, res) => {
         res.render("register.ejs", {pageTitle: "Registeration"})
+    },
+    getReset: (req, res) => {
+        res.render("reset.ejs", {pageTitle: "Reset Password"})
     }
-
 }
 
 export default userControllers
