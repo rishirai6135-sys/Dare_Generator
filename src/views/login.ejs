@@ -1,42 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    
-</body>
-</html>
-<body>
-    <header>Header</header>
-    <form method="post">
-        <div>
-            <h1>PLAYER LOGIN</h1>
-            <hr>
-        </div>
-        <div>
-            <div class="credentials">
-                <label for="username" class="credentials-label">Username:</label>
-                <input type="text" id="username" class="credentials-input" name="username">
-                <label for="password" class="credentials-label">Password:</label>
-                <div>
-                    <input type="password" id="password" class="credentials-input password" name="password">
-                    <i class="fa-regular fa-eye toggle-password"></i>
-                </div>
-                <a href="reset">forget password?</a>
-            </div>
-            <div class="sign-in-actions">    
-                <button type="submit" class="success-sign-in login">LOGIN</button>
-                <button type="button" class="cancel-sign-in login">CANCEL</button>
+<% layout("/layouts/boilerplate.ejs") %>
 
+<form method="post">
+    <div>
+        <h1>PLAYER LOGIN</h1>
+        <hr>
+    </div>
+    <div>
+        <div class="credentials">
+            <label for="username" class="credentials-label">Username:</label>
+            <input type="text" id="username" class="credentials-input" name="username">
+            <label for="password" class="credentials-label">Password:</label>
+            <div>
+                <input type="password" id="password" class="credentials-input password" name="password">
+                <i class="fa-regular fa-eye toggle-password"></i>
             </div>
+            <a href="reset">forget password?</a>
         </div>
-        <p>New Here? <a href="register">Register</a></p>
-    </form>
-    
-    <%-include('includes/footer.ejs')%>
-</body>
-</html>
+        <div class="sign-in-actions">    
+            <button type="submit" class="success-sign-in login">LOGIN</button>
+            <button type="button" class="cancel-sign-in login">CANCEL</button>
+        </div>
+    </div>
+    <p>New Here? <a href="register">Register</a></p>
+</form>

@@ -16,6 +16,11 @@
     --main-gradient: linear-gradient(to right, var(--secondary-color), var(--primary-color), var(--secondary-color));
 }
 
+
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -36,7 +41,7 @@ header{
     font-size: 1.5rem;
     text-align: center;
     line-height: 4rem;
-    width: 100vw;
+    width: 100%;
 }
 
 footer {
@@ -44,12 +49,13 @@ footer {
     color: var(--secondary-text-color);
     font-size: 1.5rem;
     text-align: center;
-    
     line-height: 2.75rem;
-    width: 100vw;
+    width: 100%;
 }
 
 form {
+    width: fit-content; /* or a fixed max-width like 28rem */
+    max-width: 90vw;
     background-color: var(--custom-helper-color);
     position: relative;
     border: none;
@@ -283,4 +289,7 @@ main {
     margin-bottom: 2.5rem;
     border-radius: 5rem;
 }
+
+
+
 
