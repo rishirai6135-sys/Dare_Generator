@@ -1,8 +1,0 @@
-CREATE TABLE IF NOT EXISTS admins (
-    id VARCHAR(50) PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    email VARCHAR(50) UNIQUE NOT NULL,
-    avatar VARCHAR(100) DEFAULT "default-user.png",
-    password_hashed VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)

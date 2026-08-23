@@ -2,6 +2,40 @@
 <html lang="en">
 <%- include('includes/head.ejs', { pageTitle: pageTitle }) %>
 <body>
-    
+    <header class="home-header">
+        <div class="project-bar">
+            <span class="logo">
+                <!-- <img src="#" alt="lol"> -->
+            </span>
+            <span>GAME TITLE</span> 
+        </div> 
+        <nav>
+            <label for="home"><span>HOME</span></label>
+            <input type="radio" name="home-actions" id="home" hidden>
+            <label for="play"><span>PLAY</span></label>
+            <input type="radio" name="home-actions" id="play" hidden>
+            <label for="play"><span>DASHBOARD</span></label>
+            <input type="radio" name="home-actions" id="home" hidden>
+        </nav>
+        <div>
+        <div class="user-avatar-bar">
+            <span>&lt; username &gt;</span>
+            <span class="user-avatar logo"></span> 
+        </div>
+    </header>
+
+    <main>
+        <div class="dare-card">LOL</div>
+
+        <div class="home-redirectors-containers">
+            <button class="home-redirectors"><a href="#">List the Truth &amp; Dares 
+                <i class="fa-solid fa-arrow-right" style="font-size: 1.5rem;"></i>
+            </a></button>
+            <button class="home-redirectors"><a href="#">Dares to Play &excl;&quest;
+                <i class="fa-solid fa-arrow-right" style="font-size: 1.5rem;"></i>
+            </a></button>
+        </div>
+    </main>
+    <%-include('includes/footer.ejs')%>
 </body>
 </html>
